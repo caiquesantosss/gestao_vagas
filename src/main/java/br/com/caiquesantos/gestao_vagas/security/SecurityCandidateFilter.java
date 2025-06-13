@@ -56,6 +56,8 @@ public class SecurityCandidateFilter extends OncePerRequestFilter {
                                         grants
                                 );
 
+                SecurityContextHolder.getContext().setAuthentication(auth);
+
             }
         }
 

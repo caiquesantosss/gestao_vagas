@@ -7,6 +7,7 @@ import br.com.caiquesantos.gestao_vagas.modules.candidate.UseCases.CreateCandida
 import br.com.caiquesantos.gestao_vagas.modules.candidate.UseCases.ListAllJobsByFilterUseCase;
 import br.com.caiquesantos.gestao_vagas.modules.candidate.UseCases.ProfileCandidateUseCase;
 import br.com.caiquesantos.gestao_vagas.modules.candidate.dto.ProfileCandidateResponseDTO;
+import br.com.caiquesantos.gestao_vagas.modules.candidate.entities.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;

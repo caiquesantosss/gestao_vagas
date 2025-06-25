@@ -1,8 +1,8 @@
-package br.com.caiquesantos.gestao_vagas.modules.Company.UseCases;
+package br.com.caiquesantos.gestao_vagas.modules.company.UseCases;
 
-import br.com.caiquesantos.gestao_vagas.modules.Company.Repositories.CompanyRepository;
-import br.com.caiquesantos.gestao_vagas.modules.Company.dto.AuthCompanyDTO;
-import br.com.caiquesantos.gestao_vagas.modules.Company.dto.AuthCompanyResponseDTO;
+import br.com.caiquesantos.gestao_vagas.modules.company.Repositories.CompanyRepository;
+import br.com.caiquesantos.gestao_vagas.modules.company.dto.AuthCompanyDTO;
+import br.com.caiquesantos.gestao_vagas.modules.company.dto.AuthCompanyResponseDTO;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import org.springframework.beans.factory.annotation.Autowired;

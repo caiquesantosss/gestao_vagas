@@ -1,8 +1,8 @@
-package br.com.caiquesantos.gestao_vagas.modules.Company.UseCases;
+package br.com.caiquesantos.gestao_vagas.modules.company.UseCases;
 
 import br.com.caiquesantos.gestao_vagas.exceptions.UserAlredyExistsException;
-import br.com.caiquesantos.gestao_vagas.modules.Company.Entities.CompanyEntity;
-import br.com.caiquesantos.gestao_vagas.modules.Company.Repositories.CompanyRepository;
+import br.com.caiquesantos.gestao_vagas.modules.company.Entities.CompanyEntity;
+import br.com.caiquesantos.gestao_vagas.modules.company.Repositories.CompanyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

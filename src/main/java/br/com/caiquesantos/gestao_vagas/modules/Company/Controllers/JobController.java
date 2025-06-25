@@ -1,8 +1,8 @@
-package br.com.caiquesantos.gestao_vagas.modules.Company.Controllers;
+package br.com.caiquesantos.gestao_vagas.modules.company.Controllers;
 
-import br.com.caiquesantos.gestao_vagas.modules.Company.Entities.JobEntity;
-import br.com.caiquesantos.gestao_vagas.modules.Company.UseCases.CreateJobUseCase;
-import br.com.caiquesantos.gestao_vagas.modules.Company.dto.CreateJobDTO;
+import br.com.caiquesantos.gestao_vagas.modules.company.Entities.JobEntity;
+import br.com.caiquesantos.gestao_vagas.modules.company.UseCases.CreateJobUseCase;
+import br.com.caiquesantos.gestao_vagas.modules.company.dto.CreateJobDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -13,6 +13,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -42,17 +43,22 @@ public class JobController {
                     )))
             })
     })
-    public JobEntity create(@Valid @RequestBody CreateJobDTO createJobDTO, HttpServletRequest request) {
+    public ResponseEntity<Object> create(@Valid @RequestBody CreateJobDTO createJobDTO, HttpServletRequest request) {
         var companyId = request.getAttribute("company_id");
 
+        try {
+            var jobEntity = JobEntity.builder()
+                    .benefits(createJobDTO.getBenefits())
+                    .companyId(UUID.fromString(companyId.toString()))
+                    .description(createJobDTO.getDescription())
+                    .level(createJobDTO.getLevel())
+                    .build();
 
-        var jobEntity = JobEntity.builder()
-                .benefits(createJobDTO.getBenefits())
-                .companyId(UUID.fromString(companyId.toString()))
-                .description(createJobDTO.getDescription())
-                .level(createJobDTO.getLevel())
-                .build();
+            var result = this.createJobUseCase.execute(jobEntity);
+            return ResponseEntity.ok().body(result);
 
-        return this.createJobUseCase.execute(jobEntity);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 }

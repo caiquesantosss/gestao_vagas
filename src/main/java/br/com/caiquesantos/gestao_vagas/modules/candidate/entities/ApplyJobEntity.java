@@ -1,6 +1,6 @@
 package br.com.caiquesantos.gestao_vagas.modules.candidate.entities;
 
-import br.com.caiquesantos.gestao_vagas.modules.Company.Entities.*;
+import br.com.caiquesantos.gestao_vagas.modules.company.Entities.*;
 import br.com.caiquesantos.gestao_vagas.modules.candidate.*;
 import jakarta.persistence.*;
 import lombok.*;

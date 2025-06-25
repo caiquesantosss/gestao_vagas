@@ -1,4 +1,4 @@
-package br.com.caiquesantos.gestao_vagas.modules.Company.Entities;
+package br.com.caiquesantos.gestao_vagas.modules.company.Entities;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;

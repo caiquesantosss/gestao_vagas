@@ -1,10 +1,11 @@
-package br.com.caiquesantos.gestao_vagas.modules.Company.dto;
+package br.com.caiquesantos.gestao_vagas.modules.company.dto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
 @Data
+@Builder
+@NoArgsConstructor
 @AllArgsConstructor
 public class CreateJobDTO {
 

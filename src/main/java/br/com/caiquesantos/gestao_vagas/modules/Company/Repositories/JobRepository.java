@@ -1,6 +1,6 @@
-package br.com.caiquesantos.gestao_vagas.modules.Company.Repositories;
+package br.com.caiquesantos.gestao_vagas.modules.company.Repositories;
 
-import br.com.caiquesantos.gestao_vagas.modules.Company.Entities.JobEntity;
+import br.com.caiquesantos.gestao_vagas.modules.company.Entities.JobEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -2,8 +2,8 @@ package br.com.caiquesantos.gestao_vagas.modules.candidate.UseCases;
 
 
 import br.com.caiquesantos.gestao_vagas.exceptions.*;
-import br.com.caiquesantos.gestao_vagas.modules.Company.Entities.*;
-import br.com.caiquesantos.gestao_vagas.modules.Company.Repositories.JobRepository;
+import br.com.caiquesantos.gestao_vagas.modules.company.Entities.*;
+import br.com.caiquesantos.gestao_vagas.modules.company.Repositories.JobRepository;
 import br.com.caiquesantos.gestao_vagas.modules.candidate.*;
 import br.com.caiquesantos.gestao_vagas.modules.candidate.entities.*;
 import br.com.caiquesantos.gestao_vagas.modules.candidate.repositories.*;
@@ -17,7 +17,6 @@ import org.mockito.Mock;
 
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.test.util.*;
 
 import java.util.*;
 

@@ -20,6 +20,6 @@ jobs:
       - name: Login Docker
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
       - name: Build docker image
-        run: docker build -t caiqueDS/gestao_vagas .
+        run: docker build -t caiqueds23/gestao_vagas .
       - name: Publish Image
-        run: docker push caiqueDS/gestao_vagas
+        run: docker push caiqueds23/gestao_vagas

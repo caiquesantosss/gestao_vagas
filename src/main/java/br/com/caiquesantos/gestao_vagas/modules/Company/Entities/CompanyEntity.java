@@ -1,4 +1,4 @@
-package br.com.caiquesantos.gestao_vagas.modules.Company.Entities;
+package br.com.caiquesantos.gestao_vagas.modules.company.Entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Pattern;
-import lombok.Data;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
@@ -16,6 +16,9 @@ import java.util.UUID;
 
 @Entity(name = "Company")
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class CompanyEntity {
 
     @Id

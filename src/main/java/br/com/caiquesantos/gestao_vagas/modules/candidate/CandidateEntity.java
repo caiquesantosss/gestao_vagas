@@ -1,5 +1,6 @@
 package br.com.caiquesantos.gestao_vagas.modules.candidate;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,15 +29,21 @@ public class CandidateEntity {
     @Pattern(regexp = "^[^\\s]+$",
             message = "O campo username não deve conter espaços")
 
+    @Schema(example = "RafaelSouza")
     private String username;
 
+    @Schema(example = "rafaelBerloni@gmail.com")
     @Email(message = "O campo deve conter um e-mail válido!")
     private String email;
 
 
     @Length(min = 8, max = 100)
+    @Schema(example = "example123")
     private String password;
+
+    @Schema(example = "Desenvolvedor de sistemas, atuando na área de DevOps atualmente!")
     private String description;
+
     private String curriculum;
 
     @CreationTimestamp

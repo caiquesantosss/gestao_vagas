@@ -1,10 +1,9 @@
-package br.com.caiquesantos.gestao_vagas.modules.Company.Controllers;
+package br.com.caiquesantos.gestao_vagas.modules.company.Controllers;
 
-import br.com.caiquesantos.gestao_vagas.modules.Company.UseCases.AuthCompanyUseCase;
-import br.com.caiquesantos.gestao_vagas.modules.Company.dto.AuthCompanyDTO;
+import br.com.caiquesantos.gestao_vagas.modules.company.UseCases.AuthCompanyUseCase;
+import br.com.caiquesantos.gestao_vagas.modules.company.dto.AuthCompanyDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

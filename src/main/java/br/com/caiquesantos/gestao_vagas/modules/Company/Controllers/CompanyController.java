@@ -1,9 +1,8 @@
-package br.com.caiquesantos.gestao_vagas.modules.Company.Controllers;
+package br.com.caiquesantos.gestao_vagas.modules.company.Controllers;
 
-import br.com.caiquesantos.gestao_vagas.modules.Company.Entities.CompanyEntity;
-import br.com.caiquesantos.gestao_vagas.modules.Company.UseCases.CreateCompanyUseCase;
+import br.com.caiquesantos.gestao_vagas.modules.company.Entities.CompanyEntity;
+import br.com.caiquesantos.gestao_vagas.modules.company.UseCases.CreateCompanyUseCase;
 import jakarta.validation.Valid;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

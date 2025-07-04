@@ -1,4 +1,4 @@
-package br.com.caiquesantos.gestao_vagas.modules.Company.dto;
+package br.com.caiquesantos.gestao_vagas.modules.company.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
